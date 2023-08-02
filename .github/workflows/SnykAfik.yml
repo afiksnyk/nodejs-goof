@@ -27,7 +27,7 @@ jobs:
           node-version: '14'
       - run: npm install snyk -g # install snyk
       - run: snyk -v
-      - run: snyk auth ${{ secrets.snyk_token }} # snyk authentication using GH secrets
+      - run: snyk auth ${{ secrets.SNYK_TOKEN }} # snyk authentication using GH secrets
 
         # Generate the HTML report
       - name: install snyk-to-html
