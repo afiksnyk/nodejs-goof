@@ -34,7 +34,7 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
           
       - name: Snyk Auth
-        run: snyk auth SNYK_TOKEN
+        run: snyk auth 099f7258-2331-41b6-80c1-57f3b4efe24c
           
 
         # Runs Snyk Open Source (SCA) analysis and uploads result to Snyk.
