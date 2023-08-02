@@ -29,12 +29,12 @@ jobs:
         #  with:
         #    node-version: 16
 
-        env:
+        env: SNYK_TOKEN
           # This is where you will need to introduce the Snyk API token created with your Snyk account
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
           
       - name: Snyk Auth
-        run: snyk auth 099f7258-2331-41b6-80c1-57f3b4efe24c
+        run: snyk auth ${{ secrets.SNYK_TOKEN }}
           
 
         # Runs Snyk Open Source (SCA) analysis and uploads result to Snyk.
